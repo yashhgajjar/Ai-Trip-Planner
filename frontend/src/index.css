@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 15s infinite linear;
+}
+
+/* Fade-in animation for added destinations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Fade-out animation for removing destinations */
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Input focus transition */
+input:focus {
+  transition: all 0.3s ease;
+  border-color: #82a7e4; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue shadow */
+}
+
+/* Button hover effect without transform */
+/* button:hover {
+  background-color: #82a7e4; 
+  transition: background-color 0.3s ease;
+} */
+
+/* Button focus state to prevent layout shifts */
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Add focus ring */
+}
