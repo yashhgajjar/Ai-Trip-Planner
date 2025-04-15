@@ -23,7 +23,7 @@ const TripHistory = () => {
   const fetchTrips = async (userId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/trips/get-trips?userId=${userId}`
+        `https://ai-trip-planner-qok6.onrender.com/api/trips/get-trips?userId=${userId}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -44,7 +44,7 @@ const TripHistory = () => {
   const fetchTripPdfs = async (userId, tripId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/trips/get-trip-pdfs?userId=${userId}&tripId=${tripId}`
+        `https://ai-trip-planner-qok6.onrender.com/api/trips/get-trip-pdfs?userId=${userId}&tripId=${tripId}`
       );
   
       if (response.ok) {

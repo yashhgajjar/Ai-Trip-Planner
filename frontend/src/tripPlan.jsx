@@ -129,7 +129,7 @@ const TripPlan = () => {
     const tripData = { ...formData, userId };
   
     try {
-      const response = await fetch("http://localhost:5000/api/trips/save-trip", {
+      const response = await fetch("https://ai-trip-planner-qok6.onrender.com/api/trips/save-trip", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(tripData),
