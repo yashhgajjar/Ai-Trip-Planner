@@ -76,7 +76,7 @@ const Home = () => {
     {
       title: "Rural Countryside in the French Alps",
       description:
-        "Stroll through the quiet villages in the French Alps, where rolling hills Yash dense forests and traditional alpine homes.",
+        "Stroll through the quiet villages in the French Alps, where rolling hills meet dense forests and traditional alpine homes.",
       placesNearby: ["Chamonix", "Annecy", "Mont Blanc"],
     },
     {
@@ -146,7 +146,7 @@ const Home = () => {
     navigate("/tripPlan");
   };
 
-  const s3ImageUrl = "https://Yashvisodiya.s3.eu-north-1.amazonaws.com/Trip.png"; 
+  const s3ImageUrl = "https://meetvisodiya.s3.eu-north-1.amazonaws.com/Trip.png"; 
   return (
     <div className="min-h-screen flex flex-col">
       <Header
