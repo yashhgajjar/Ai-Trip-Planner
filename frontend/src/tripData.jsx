@@ -328,7 +328,7 @@ Make sure your response is **long, structured, and covers every detail**.
 
     try {
       const res = await axios.post(
-        "https://ai-trip-planner-qok6.onrender.com/api/upload-pdf",
+        "http://localhost:5000/api/upload-pdf",
         formData
       );
       alert("PDF uploaded successfully!");
