@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // For the hamburger menu icon
 import { User } from "lucide-react";
+import logo from "../assets/logo.png";
+
 const Header = ({ buttons = [] }) => {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -25,14 +27,17 @@ const Header = ({ buttons = [] }) => {
 
   return (
     <div className="pb-5">
-      <header className="fixed top-0 left-0 w-full bg-gray-200 shadow-md text-gray-500 p-3 flex items-center justify-between z-50">
-        {/* Logo Section */}
-        <div
-          className="text-xl md:text-3xl font-raleway  tracking text-blue-400 cursor-pointer"
-          onClick={() => navigate("/")}
-        >
-          Let's Trip
-        </div>
+      <header className="fixed top-0 left-0 w-full bg-gray-200 shadow-md text-gray-500 p-3 flex items-center justify-between z-50 h-20">
+  {/* Logo + Heading Section */}
+  <div
+    className="flex items-center gap-2 cursor-pointer"
+    onClick={() => navigate("/")}
+  >
+    <img src={logo} alt="AI Trip Planner" className="h-12 object-contain" />
+    <span className="text-lg md:text-2xl font-semibold text-gray-500">
+      AI Trip Planner
+    </span>
+  </div>
 
         {/* Conditional Rendering */}
         {isMobile ? (
